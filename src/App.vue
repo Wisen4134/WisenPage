@@ -1,99 +1,87 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { ref, reactive } from 'vue'
+//import HelloWorld from './components/HelloWorld.vue'
+
+//app-bar按鈕
+const menus = ref([{ value: 1, routerName: '/', title: '首頁', icon: 'mdi-home-variant-outline' },
+{ value: 2, routerName: 'project', title: '專案經歷', icon: ' mdi-book-open-outline' },
+{ value: 3, routerName: 'contact', title: '聯絡我', icon: 'mdi-phone' }]);
+
+const appIcons = ref([{value:1,link:''}]);
+
+//切換Theme
+const theme = ref('light');
+const themeText = ref('Day');
+function changeTheme() {
+  theme.value = theme.value === 'light' ? 'dark' : 'light'
+  themeText.value = themeText.value === 'Day' ? 'Night' : 'Day'
+}
+
+
+
 </script>
 
 <template>
-  <!--
-    <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <v-app :theme="theme">
+    <v-app-bar 
+    app 
+    color="cyan" 
+    scroll-behavior="hide"  
+    density="compact" 
+    :elevation="2" 
+    rounded 
+    
+    >
+      <v-container class="py-0 fill-height">
+        <v-app-bar-nav-icon
+        
+        >
+          <v-icon>mdi-alpha-w-circle</v-icon>
+          </v-app-bar-nav-icon>
+        <v-app-bar-title class="title-color">
+          Wisen`s Page
+        </v-app-bar-title>
+        <v-spacer></v-spacer>
+        
+        <v-btn icon href="https://github.com/Wisen4134" target="blank">
+          <v-icon>mdi-github</v-icon>
+        </v-btn>
+        <v-btn icon href="https://www.linkedin.com/in/%E5%AE%87%E5%91%88-%E9%BB%83-3908781a7/" target="blank">
+          <v-icon>mdi-linkedin</v-icon>
+        </v-btn>
+        
+        <v-btn icon href="https://www.cakeresume.com/me/wisen-huang-wisenb" target="blank">
+          <v-icon>mdi-cake-variant</v-icon>
+        </v-btn>
+      </v-container>
+      <v-btn :prepend-icon="theme === 'light'?'mdi-weather-sunny' :'mdi-weather-night'"
+              @click="changeTheme"
+        >
+          <v-text>{{ themeText }}</v-text>
+        </v-btn>
+    </v-app-bar>
+    <v-main>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <v-row justify="space-around">
+        <v-col id="menus" v-for="item in menus" :key="item.key" :name="item.value">
+          <v-btn block text  @click="$router.push(item.routerName)">
+            <v-icon>{{ item.icon }}</v-icon>
+            {{ item.title }}
+          </v-btn>
+        </v-col>
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/test">Test</RouterLink>
-      </nav>
-    </div>
-  </header>
-  -->
-  <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+      </v-row>
+      <div id="app">
+        <RouterView />
+      </div>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/test">Test</RouterLink>
-      </nav>
-    </div>
-
-  <RouterView />
+    </v-main>
+  </v-app>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+#menus .v-btn::before {
+  background-color: green;
 }
 </style>
