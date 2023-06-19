@@ -1,0 +1,1 @@
+import{r as e,a,o,c as t}from"./index-e4832dd0.js";const s={__name:"test",setup(r){return e(null),a([["mdi-book-open-outline","作品集"],["mdi-alpha-w-box","關於我"]]),(n,c)=>(o(),t("h1",null," 我是測試頁 "))}};export{s as default};
