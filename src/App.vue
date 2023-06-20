@@ -66,7 +66,7 @@ function changeTheme() {
       <v-row justify="space-around">
         <v-col id="menus" v-for="item in menus" :key="item.key" :name="item.value">
           <v-btn block text  @click="$router.push(item.routerName)" color="blue-lighten-5">
-            <v-icon>{{ item.icon }}</v-icon>
+            <v-icon color="blue">{{ item.icon }}</v-icon>
             {{ item.title }}
           </v-btn>
         </v-col>

@@ -1,23 +1,31 @@
 <template>
-    <h1>
-        我是測試頁
-    </h1>
+    
+    <!--  -->
+    
+    <v-row>
+        <v-col>
+            <aboutME></aboutME>
+        </v-col>
+    </v-row>
+    
+    <br>
+    
+    <v-row>
+        <v-col>
+            <caseTimeLine></caseTimeLine>
+        </v-col>
+    </v-row>
+
 </template>
 
 <script setup>
 import {ref,reactive} from 'vue'
-    
-    
+import aboutME from '../components/aboutME.vue';
+import caseTimeLine from '../components/caseTimeLine.vue';
 
             
         
 </script>
 <style scoped>
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
+
 </style>

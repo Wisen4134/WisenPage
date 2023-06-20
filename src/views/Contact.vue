@@ -1,10 +1,8 @@
 <template>
-    <h1>
-        我是聯絡頁
-    </h1>
+    <contactMe></contactMe>
 </template>
 
 <script setup>
 import {ref,reactive} from 'vue'
-    
+import contactMe from '../components/contactMe.vue';
 </script>
