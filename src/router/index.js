@@ -7,7 +7,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'index',
-      component:()=> import('../views/test.vue')
+      component:()=> import('../views/Main.vue')
     },
     {
       path: '/project',

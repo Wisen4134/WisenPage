@@ -5,7 +5,7 @@ import { ref, reactive } from 'vue'
 
 //app-bar按鈕
 const menus = ref([{ value: 1, routerName: '/', title: '首頁', icon: 'mdi-home-variant-outline' },
-{ value: 2, routerName: 'project', title: '專案經歷', icon: ' mdi-book-open-outline' },
+{ value: 2, routerName: 'project', title: '作品集', icon: ' mdi-book-open-outline' },
 { value: 3, routerName: 'contact', title: '聯絡我', icon: 'mdi-phone' }]);
 
 const appIcons = ref([{value:1,link:''}]);
@@ -26,7 +26,7 @@ function changeTheme() {
   <v-app :theme="theme">
     <v-app-bar 
     app 
-    color="cyan" 
+    color="indigo" 
     scroll-behavior="hide"  
     density="compact" 
     :elevation="2" 
@@ -65,7 +65,7 @@ function changeTheme() {
 
       <v-row justify="space-around">
         <v-col id="menus" v-for="item in menus" :key="item.key" :name="item.value">
-          <v-btn block text  @click="$router.push(item.routerName)">
+          <v-btn block text  @click="$router.push(item.routerName)" color="blue-lighten-5">
             <v-icon>{{ item.icon }}</v-icon>
             {{ item.title }}
           </v-btn>
@@ -81,7 +81,8 @@ function changeTheme() {
 </template>
 
 <style scoped>
-#menus .v-btn::before {
-  background-color: green;
+#menus  {
+  padding-left: 0%;
+  padding-right: 0%;
 }
 </style>
