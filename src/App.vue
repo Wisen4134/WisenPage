@@ -50,7 +50,7 @@
         </v-col>
 
       </v-row>
-      <div id="main">
+      <div id="app">
         <RouterView />
       </div>
 
