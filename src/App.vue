@@ -88,7 +88,5 @@ function changeTheme() {
   padding-left: 0%;
   padding-right: 0%;
 }
-#main{
-  
-}
+
 </style>

@@ -148,7 +148,7 @@ import { ref, reactive } from 'vue'
 </script>
 
 <style scoped>
-#last {}
+
 #title{
     width: 100%;
     
