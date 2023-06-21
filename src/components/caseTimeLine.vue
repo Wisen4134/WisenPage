@@ -1,19 +1,12 @@
 <template>
-    <div class="d-flex justify-center bg-surface-variant">
+    <div class="d-flex justify-center bg-surface-variant" id="title">
         <h1>專案經歷</h1>
     </div>
-        
-    <v-timeline>
-        <v-timeline-item dot-color="purple-lighten-2" fill-dot>
-            <v-hover
-                v-slot="{isHovering,props}"
-                close-delay="200"
-            >
-                <v-card
-                :elevation="isHovering ? 16 : 2"
-                :class="{ 'on-hover': isHovering }"
-                v-bind="props"
-                >
+
+    <v-timeline justify="center">
+        <v-timeline-item dot-color="purple-lighten-2" fill-dot >
+            <v-hover v-slot="{ isHovering, props }" close-delay="200">
+                <v-card :elevation="isHovering ? 16 : 2" :class="{ 'on-hover': isHovering }" v-bind="props">
                     <v-card-title class="bg-purple-lighten-2">
                         <v-icon size="large" class="me-4" icon="mdi-focus-auto"></v-icon>
                         <h2 class="font-weight-light">
@@ -31,15 +24,8 @@
         </v-timeline-item>
 
         <v-timeline-item dot-color="amber-lighten-1" fill-dot size="x-small">
-            <v-hover
-                v-slot="{isHovering,props}"    
-                close-delay="200"
-            >
-                <v-card
-                    :elevation="isHovering ? 16 : 2"
-                    :class="{ 'on-hover': isHovering }"
-                    v-bind="props"
-                >
+            <v-hover v-slot="{ isHovering, props }" close-delay="200">
+                <v-card :elevation="isHovering ? 16 : 2" :class="{ 'on-hover': isHovering }" v-bind="props">
                     <v-card-title class="bg-amber-lighten-1 justify-end">
                         <h2 class="me-4 font-weight-light">
                             ESSGateway
@@ -51,86 +37,86 @@
                     </v-card-text>
                 </v-card>
             </v-hover>
-            
+
         </v-timeline-item>
 
         <v-timeline-item dot-color="cyan-lighten-1" fill-dot>
-            <v-card>
-                <v-card-title class="bg-cyan-lighten-1">
-                    <v-icon class="me-4" size="large" icon="mdi-monitor-eye"></v-icon>
-                    <h2 class="font-weight-light">
-                        WatchDog
-                    </h2>
-                </v-card-title>
-                <v-card-text>
-                    待補完
-                </v-card-text>
-            </v-card>
-        </v-timeline-item>
-
-        <v-timeline-item dot-color="red-lighten-1" fill-dot size="x-small">
-            <v-card>
-                <v-card-title class="bg-red-lighten-1 justify-end">
-                    <h2 class="me-4 font-weight-light">
-                        Winform排程視窗
-                    </h2>
-                    <v-icon size="large" icon="mdi-table-cog"></v-icon>
-                </v-card-title>
-                <v-card-text>
-                    待補完
-                </v-card-text>
-            </v-card>
-        </v-timeline-item>
-
-        <v-timeline-item dot-color="green-lighten-1" fill-dot>
-            <v-card>
-                <v-card-title class="bg-green-lighten-1">
-                    <v-icon class="me-4" size="large" icon="mdi-store-cog"></v-icon>
-                    <h2 class="font-weight-light">
-                        PMSystem
-                    </h2>
-                </v-card-title>
-                <v-card-text>
-                    待補完
-                </v-card-text>
-            </v-card>
-        </v-timeline-item>
-
-
-        <v-timeline-item dot-color="amber-lighten-1" fill-dot size="x-small">
-            <v-hover
-                v-slot="{isHovering,props}"    
-                close-delay="200"
-            >
-                <v-card
-                    :elevation="isHovering ? 16 : 2"
-                    :class="{ 'on-hover': isHovering }"
-                    v-bind="props"
-                >
-                    <v-card-title class="bg-amber-lighten-1 justify-end">
-                        <h2 class="me-4 font-weight-light">
-                            HourSending
+            <v-hover v-slot="{ isHovering, props }" close-delay="200">
+                <v-card :elevation="isHovering ? 16 : 2" :class="{ 'on-hover': isHovering }" v-bind="props">
+                    <v-card-title class="bg-cyan-lighten-1">
+                        <v-icon class="me-4" size="large" icon="mdi-monitor-eye"></v-icon>
+                        <h2 class="font-weight-light">
+                            WatchDog
                         </h2>
-                        <v-icon size="large" icon="mdi-send-circle"></v-icon>
                     </v-card-title>
                     <v-card-text>
                         待補完
                     </v-card-text>
                 </v-card>
             </v-hover>
-            
+
         </v-timeline-item>
 
-        <v-timeline-item dot-color="purple-lighten-2" fill-dot>
-            <v-hover
-                v-slot="{isHovering,props}"
-                close-delay="200"
-            >
-                <v-card
-                :elevation="isHovering ? 16 : 2"
-                :class="{ 'on-hover': isHovering }"
-                v-bind="props"
-                >
+        <v-timeline-item dot-color="red-lighten-1" fill-dot size="x-small">
+            <v-hover v-slot="{ isHovering, props }" close-delay="200">
+                <v-card :elevation="isHovering ? 16 : 2" :class="{ 'on-hover': isHovering }" v-bind="props">
+                    <v-card-title class="bg-red-lighten-1 justify-end">
+                        <h2 class="me-4 font-weight-light">
+                            Winform排程視窗
+                        </h2>
+                        <v-icon size="large" icon="mdi-table-cog"></v-icon>
+                    </v-card-title>
+                    <v-card-text>
+                        待補完
+                    </v-card-text>
+                </v-card>
+            </v-hover>
+
+        </v-timeline-item>
+
+        <v-timeline-item dot-color="green-lighten-1" fill-dot>
+            <v-hover v-slot="{ isHovering, props }" close-delay="200">
+                <v-card :elevation="isHovering ? 16 : 2" :class="{ 'on-hover': isHovering }" v-bind="props">
+                    <v-card-title class="bg-green-lighten-1">
+                        <v-icon class="me-4" size="large" icon="mdi-store-cog"></v-icon>
+                        <h2 class="font-weight-light">
+                            物業管理系統後台DEMO
+                        </h2>
+                    </v-card-title>
+                    <v-card-text>
+                        Vue3(optional API) + VueCLI + Vuetify
+                        根據業主需求文件自行使用draw.io構建畫面、使用者需求分析
+                        並進一步製作專案檔案、專案架構路由、API規劃整理、專案進度等文件
+                        藉由此專案步入Web的世界,開始自訂Web學習地圖,逐步接觸HTML、CSS、JS、Webpack、npm、Node.js、WebAPI、Vue、Vuetify
+
+                    </v-card-text>
+                </v-card>
+            </v-hover>
+
+        </v-timeline-item>
+
+
+        <v-timeline-item dot-color="amber-lighten-1" fill-dot size="x-small">
+            <v-hover v-slot="{ isHovering, props }" close-delay="200">
+                <v-card :elevation="isHovering ? 16 : 2" :class="{ 'on-hover': isHovering }" v-bind="props">
+                    <v-card-title class="bg-amber-lighten-1 justify-end">
+                        <h2 class="me-4 font-weight-light">
+                            Line-Webhook-.Net-MSSQL
+                        </h2>
+                        <v-icon size="large" icon="mdi-send-circle"></v-icon>
+                    </v-card-title>
+                    <v-card-text>
+                        嘗試使用介面實現OOP之依賴注入、依賴反轉之設計模式
+                        每小時推播內容至Line聊天室
+                    </v-card-text>
+                </v-card>
+            </v-hover>
+
+        </v-timeline-item>
+
+        <v-timeline-item id="last" dot-color="purple-lighten-2" fill-dot>
+            <v-hover v-slot="{ isHovering, props }" close-delay="200">
+                <v-card :elevation="isHovering ? 16 : 2" :class="{ 'on-hover': isHovering }" v-bind="props">
                     <v-card-title class="bg-purple-lighten-2">
                         <v-icon size="large" class="me-4" icon="mdi-download-circle-outline"></v-icon>
                         <h2 class="font-weight-light">
@@ -139,15 +125,19 @@
                     </v-card-title>
 
                     <v-card-text>
-                        環境&技術：.Net 6、 Visual Studio 2022 、EFcore
-                        <br>
-                        敘述：
+                        前端頁面
+                        Vue3 + Vite + Vuetify
+                        日期選擇器 + 發送按鈕 + Csv下載按鈕 + 表格元件(可排序、顯示數量篩選)
+                        對後端發送api撈取資料回前端 做簡單處理後顯示在表格中 可點擊Csv下載按鈕將表格內容轉換成Csv後下載至本地 檔名為[yyyy-mm-dd.csv]
+                        後端部分
+                        .Net6環境 + WebApi專案 + EFCore(ORM)+ MSSQL 2019
+                        接收帶有日期的Api後,對資料庫篩選並撈取資料,回來後將Datetime格式的資料稍做處理(.Net date格式為yyyy-MM-ddTHH:mm:ss)
                     </v-card-text>
                 </v-card>
             </v-hover>
         </v-timeline-item>
-        
-        
+
+
     </v-timeline>
 </template>
 
@@ -155,8 +145,12 @@
 import { ref, reactive } from 'vue'
 
 
-
-
-
 </script>
-<style scoped></style>
+
+<style scoped>
+#last {}
+#title{
+    width: 100%;
+    
+}
+</style>

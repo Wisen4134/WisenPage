@@ -15,7 +15,8 @@
             <caseTimeLine></caseTimeLine>
         </v-col>
     </v-row>
-
+    <br>
+    &nbsp;
 </template>
 
 <script setup>

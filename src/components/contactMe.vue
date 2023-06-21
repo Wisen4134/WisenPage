@@ -8,7 +8,7 @@
                         <v-card-title class="text-h5">
                             {{ item.title }}
                         </v-card-title>
-                        <v-card-text><a :href=item.link target="blank">{{item.link}}</a></v-card-text>
+                        <v-card-text><a :href=item.link target="_blank">{{item.link}}</a></v-card-text>
                     </v-card>
                 </v-timeline-item>
             </v-timeline>
@@ -29,6 +29,7 @@ const items = ref([
 
 
 </script>
+
 <style scoped>
 #menu{
     padding: 0%;
