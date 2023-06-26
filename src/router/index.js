@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-
+import main from '../views/Main.Vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -8,7 +8,7 @@ const router = createRouter({
       name: 'index',
 
       // -- 延遲加載 --
-      component:()=> import('../views/Main.vue')
+      component:main,
     },
     {
       path: '/project',

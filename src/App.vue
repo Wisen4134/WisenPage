@@ -4,7 +4,6 @@
     <v-app-bar 
     app 
     color="indigo" 
-    
     scroll-behavior="hide"  
     density="compact" 
     :elevation="2" 
@@ -13,11 +12,13 @@
     >
       <v-container class="py-0 fill-height">
         <v-app-bar-nav-icon
+        icon="mdi-alpha-w-circle"
+        
         
         >
-          <v-icon>mdi-alpha-w-circle</v-icon>
+          
           </v-app-bar-nav-icon>
-        <v-app-bar-title class="title-color">
+        <v-app-bar-title >
           Wisen`s Page
         </v-app-bar-title>
         <v-spacer></v-spacer>
@@ -36,14 +37,14 @@
       <v-btn :prepend-icon="theme === 'light'?'mdi-weather-sunny' :'mdi-weather-night'"
               @click="changeTheme"
         >
-          <v-text>{{ themeText }}</v-text>
+          <v-text >{{ themeText }}</v-text>
         </v-btn>
     </v-app-bar>
     <v-main>
 
       <v-row justify="space-around">
         <v-col id="menus" v-for="item in menus" :key="item.key" :name="item.value">
-          <v-btn block text  @click="$router.push(item.routerName)" color="blue-lighten-5">
+          <v-btn block text  @click="$router.push(item.routerName)" color="white">
             <v-icon color="blue">{{ item.icon }}</v-icon>
             {{ item.title }}
           </v-btn>

@@ -1,25 +1,34 @@
 <template>
     <!--  -->
-
     <v-row>
         <v-col>
-            <v-card>
-                <v-row>
-                    <v-col max-height="50%" width="100%">
-                        <v-img cover src="me.jpg">
-                        </v-img>
-                    </v-col>
-                    <v-col>
-                        <h1>黃宇呈(Wisen)</h1>
-                        <p>待補完</p>
-                    </v-col>
-                </v-row>
-
+            <v-card variant="outlined"  >
+                <v-img
+                max-height="200"
+                
+                src="me2.jpg"
+                >
+                
+                </v-img>
+                <v-card-item title="黃宇呈(Wisen)" subtitle="Software Engineer"></v-card-item>
+                <v-card-text class="font-weight-black ">
+                    about me 
+                </v-card-text>
             </v-card>
         </v-col>
         <v-col>
-            <v-card height="100%" width="100%">
-                專業技能待補完
+            <v-card variant="outlined" >
+                <v-img
+                max-height="200"
+                cover
+                src="https://fastly.picsum.photos/id/370/350/165.jpg?hmac=i2447GIC_tl7nNTGXlB16Kdux2Bb_TlKXVQj1D1cTDE"
+                >
+                
+                </v-img>
+                <v-card-item title="Skills" subtitle="Subtitle1"></v-card-item>
+                <v-card-text class="font-weight-black">
+                    some skill
+                </v-card-text>
             </v-card>
         </v-col>
     </v-row>

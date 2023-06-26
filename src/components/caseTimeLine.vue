@@ -1,23 +1,31 @@
 <template>
-    <div class="d-flex justify-center bg-surface-variant" id="title">
-        <h1>專案經歷</h1>
-    </div>
-
-    <v-timeline justify="center">
-        <v-timeline-item dot-color="purple-lighten-2" fill-dot >
+    <v-container fluid>
+        <div class="d-flex justify-center bg-surface-variant" id="title">
+        <v-text class="text-h4 ">專案經歷</v-text>
+    </div>    
+    </v-container>
+    
+    <v-container fluid>
+        <v-timeline justify="center" >
+        <v-timeline-item dot-color="purple-lighten-2" fill-dot size="default">
             <v-hover v-slot="{ isHovering, props }" close-delay="200">
-                <v-card :elevation="isHovering ? 16 : 2" :class="{ 'on-hover': isHovering }" v-bind="props">
+                <v-card :elevation="isHovering ? 16 : 2" :class="{ 'on-hover': isHovering }" v-bind="props" 
+                    variant="outlined">
                     <v-card-title class="bg-purple-lighten-2">
                         <v-icon size="large" class="me-4" icon="mdi-focus-auto"></v-icon>
-                        <h2 class="font-weight-light">
+                        <h2 class="font-weight-light ">
                             AutoFocus
                         </h2>
                     </v-card-title>
 
-                    <v-card-text>
+                    <v-card-text class=" font-weight-black text-center"  >
                         環境&技術：.Net framework 4.7.2 、 Visual Studio 2019 、ModbusRTU
                         <br>
-                        敘述：
+                        敘述：winform
+                        撰寫使用文件
+                        ModbusRTU
+                        可讀寫指定路徑json
+                        多執行緒、lock、mutex
                     </v-card-text>
                 </v-card>
             </v-hover>
@@ -25,14 +33,15 @@
 
         <v-timeline-item dot-color="amber-lighten-1" fill-dot size="x-small">
             <v-hover v-slot="{ isHovering, props }" close-delay="200">
-                <v-card :elevation="isHovering ? 16 : 2" :class="{ 'on-hover': isHovering }" v-bind="props">
+                <v-card :elevation="isHovering ? 16 : 2" :class="{ 'on-hover': isHovering }" v-bind="props"
+                    variant="outlined">
                     <v-card-title class="bg-amber-lighten-1 justify-end">
                         <h2 class="me-4 font-weight-light">
                             ESSGateway
                         </h2>
                         <v-icon size="large" icon="mdi-battery-charging-medium"></v-icon>
                     </v-card-title>
-                    <v-card-text>
+                    <v-card-text class=" font-weight-black text-center">
                         待補完
                     </v-card-text>
                 </v-card>
@@ -42,14 +51,15 @@
 
         <v-timeline-item dot-color="cyan-lighten-1" fill-dot>
             <v-hover v-slot="{ isHovering, props }" close-delay="200">
-                <v-card :elevation="isHovering ? 16 : 2" :class="{ 'on-hover': isHovering }" v-bind="props">
+                <v-card :elevation="isHovering ? 16 : 2" :class="{ 'on-hover': isHovering }" v-bind="props"
+                    variant="outlined">
                     <v-card-title class="bg-cyan-lighten-1">
                         <v-icon class="me-4" size="large" icon="mdi-monitor-eye"></v-icon>
                         <h2 class="font-weight-light">
                             WatchDog
                         </h2>
                     </v-card-title>
-                    <v-card-text>
+                    <v-card-text class=" font-weight-black text-center">
                         待補完
                     </v-card-text>
                 </v-card>
@@ -59,14 +69,15 @@
 
         <v-timeline-item dot-color="red-lighten-1" fill-dot size="x-small">
             <v-hover v-slot="{ isHovering, props }" close-delay="200">
-                <v-card :elevation="isHovering ? 16 : 2" :class="{ 'on-hover': isHovering }" v-bind="props">
+                <v-card :elevation="isHovering ? 16 : 2" :class="{ 'on-hover': isHovering }" v-bind="props"
+                    variant="outlined">
                     <v-card-title class="bg-red-lighten-1 justify-end">
                         <h2 class="me-4 font-weight-light">
                             Winform排程視窗
                         </h2>
                         <v-icon size="large" icon="mdi-table-cog"></v-icon>
                     </v-card-title>
-                    <v-card-text>
+                    <v-card-text class=" font-weight-black text-center">
                         待補完
                     </v-card-text>
                 </v-card>
@@ -76,14 +87,15 @@
 
         <v-timeline-item dot-color="green-lighten-1" fill-dot>
             <v-hover v-slot="{ isHovering, props }" close-delay="200">
-                <v-card :elevation="isHovering ? 16 : 2" :class="{ 'on-hover': isHovering }" v-bind="props">
+                <v-card :elevation="isHovering ? 16 : 2" :class="{ 'on-hover': isHovering }" v-bind="props"
+                    variant="outlined">
                     <v-card-title class="bg-green-lighten-1">
                         <v-icon class="me-4" size="large" icon="mdi-store-cog"></v-icon>
                         <h2 class="font-weight-light">
                             物業管理系統後台DEMO
                         </h2>
                     </v-card-title>
-                    <v-card-text>
+                    <v-card-text class=" font-weight-black text-center">
                         Vue3(optional API) + VueCLI + Vuetify
                         根據業主需求文件自行使用draw.io構建畫面、使用者需求分析
                         並進一步製作專案檔案、專案架構路由、API規劃整理、專案進度等文件
@@ -98,14 +110,15 @@
 
         <v-timeline-item dot-color="amber-lighten-1" fill-dot size="x-small">
             <v-hover v-slot="{ isHovering, props }" close-delay="200">
-                <v-card :elevation="isHovering ? 16 : 2" :class="{ 'on-hover': isHovering }" v-bind="props">
+                <v-card :elevation="isHovering ? 16 : 2" :class="{ 'on-hover': isHovering }" v-bind="props"
+                    variant="outlined">
                     <v-card-title class="bg-amber-lighten-1 justify-end">
                         <h2 class="me-4 font-weight-light">
                             Line-Webhook-.Net-MSSQL
                         </h2>
                         <v-icon size="large" icon="mdi-send-circle"></v-icon>
                     </v-card-title>
-                    <v-card-text>
+                    <v-card-text class=" font-weight-black text-center">
                         嘗試使用介面實現OOP之依賴注入、依賴反轉之設計模式
                         每小時推播內容至Line聊天室
                     </v-card-text>
@@ -116,7 +129,8 @@
 
         <v-timeline-item id="last" dot-color="purple-lighten-2" fill-dot>
             <v-hover v-slot="{ isHovering, props }" close-delay="200">
-                <v-card :elevation="isHovering ? 16 : 2" :class="{ 'on-hover': isHovering }" v-bind="props">
+                <v-card :elevation="isHovering ? 16 : 2" :class="{ 'on-hover': isHovering }" v-bind="props"
+                    variant="outlined">
                     <v-card-title class="bg-purple-lighten-2">
                         <v-icon size="large" class="me-4" icon="mdi-download-circle-outline"></v-icon>
                         <h2 class="font-weight-light">
@@ -124,7 +138,7 @@
                         </h2>
                     </v-card-title>
 
-                    <v-card-text>
+                    <v-card-text class=" font-weight-black text-center">
                         前端頁面
                         Vue3 + Vite + Vuetify
                         日期選擇器 + 發送按鈕 + Csv下載按鈕 + 表格元件(可排序、顯示數量篩選)
@@ -139,18 +153,19 @@
 
 
     </v-timeline>
+    </v-container>
+    
 </template>
 
 <script setup>
 import { ref, reactive } from 'vue'
 
 
+const items = ref([{ size: 'default', dotColor: 'purple-lighten-2', cardColor: 'bg-purple-lighten-2', icon: 'mdi-focus-auto', title: 'AutoFocus', content: '', }])
+
 </script>
 
-<style scoped>
-
-#title{
+<style scoped>#title {
     width: 100%;
-    
-}
-</style>
+
+}</style>
