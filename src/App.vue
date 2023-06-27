@@ -1,14 +1,14 @@
 
 <template>
-  <v-app :theme="theme">
+  <v-app :theme="theme" >
     <v-app-bar 
     app 
-    color="indigo" 
+    color="#B2DFDB" 
     scroll-behavior="hide"  
     density="compact" 
     :elevation="2" 
     rounded 
-    
+    theme="light"
     >
       <v-container class="py-0 fill-height">
         <v-app-bar-nav-icon
@@ -23,16 +23,10 @@
         </v-app-bar-title>
         <v-spacer></v-spacer>
         
-        <v-btn icon href="https://github.com/Wisen4134" target="_blank">
-          <v-icon>mdi-github</v-icon>
-        </v-btn>
-        <v-btn icon href="https://www.linkedin.com/in/%E5%AE%87%E5%91%88-%E9%BB%83-3908781a7/" target="_blank">
-          <v-icon>mdi-linkedin</v-icon>
+        <v-btn icon v-for="appicon in appIcons" :key="appicon.key" :name="appicon.value" :href="appicon.link" target="_blank">
+          <v-icon >{{appicon.icon}}</v-icon>
         </v-btn>
         
-        <v-btn icon href="https://www.cakeresume.com/me/wisen-huang-wisenb" target="_blank">
-          <v-icon>mdi-cake-variant</v-icon>
-        </v-btn>
       </v-container>
       <v-btn :prepend-icon="theme === 'light'?'mdi-weather-sunny' :'mdi-weather-night'"
               @click="changeTheme"
@@ -40,18 +34,18 @@
           <v-text >{{ themeText }}</v-text>
         </v-btn>
     </v-app-bar>
-    <v-main>
+    <v-main >
 
-      <v-row justify="space-around">
+      <v-row justify="space-around" >
         <v-col id="menus" v-for="item in menus" :key="item.key" :name="item.value">
-          <v-btn block text  @click="$router.push(item.routerName)" color="white">
-            <v-icon color="blue">{{ item.icon }}</v-icon>
-            {{ item.title }}
+          <v-btn variant="outlined" block  @click="$router.push(item.routerName)" color="#E0F2F1" rounded="false">
+            <v-icon color="#00796B">{{ item.icon }}</v-icon>
+            <v-text class="text-teal-darken-2 text-subtitle-1 font-weight-medium">{{ item.title }}</v-text>
           </v-btn>
         </v-col>
 
       </v-row>
-      <div id="app">
+      <div id="app" >
         <RouterView />
       </div>
 
@@ -69,7 +63,11 @@ const menus = ref([{ value: 1, routerName: '/', title: '首頁', icon: 'mdi-home
 { value: 2, routerName: 'project', title: '作品集', icon: ' mdi-book-open-outline' },
 { value: 3, routerName: 'contact', title: '聯絡我', icon: 'mdi-phone' }]);
 
-const appIcons = ref([{value:1,link:''}]);
+const appIcons = ref([
+  {value:1,link:'https://github.com/Wisen4134',icon:'mdi-github',},
+  {value:2,link:'https://www.linkedin.com/in/%E5%AE%87%E5%91%88-%E9%BB%83-3908781a7/',icon:'mdi-linkedin',},
+  {value:3,link:'https://www.cakeresume.com/me/wisen-huang-wisenb',icon:'mdi-cake-variant',},
+]);
 
 //切換Theme
 const theme = ref('light');

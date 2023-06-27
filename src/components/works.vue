@@ -29,6 +29,10 @@ import {ref,reactive} from 'vue'
 
 const model = ref(null);
 
+const items = ref([
+    {},
+])
+
 </script>
 
 <style scoped>
