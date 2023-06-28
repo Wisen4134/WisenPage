@@ -1,10 +1,10 @@
 <template>
-    <v-row  justify-content="start" align-content="start" v-for="item in items" :key="item.key" :name="item.value">
-        <v-col id="menu">
-            <v-timeline line-thickness="10" >
+    <v-row   v-for="item in items" :key="item.key" :name="item.value">
+        <v-col >
+            <v-timeline line-thickness="10" class="mx-auto" align="center"  side="end">
                 <v-timeline-item size="x-large" :icon=item.icon fill-dot dot-color="white" elevation="18">
                     
-                    <v-card  class="elevation-10" width="2000">
+                    <v-card  class="elevation-10" width="200"  >
                         <v-card-title class="text-h5">
                             {{ item.title }}
                         </v-card-title>
@@ -31,8 +31,6 @@ const items = ref([
 </script>
 
 <style scoped>
-#menu{
-    padding: 0%;
-}
+
 
 </style>

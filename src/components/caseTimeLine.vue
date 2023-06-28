@@ -2,16 +2,16 @@
     <v-row>
         <v-col>
             <v-container fluid>
-                <div class="d-flex justify-center " id="title">
+                <div class="d-flex justify-center ">
                     <v-text class="text-h4 font-weight-bold">專案經歷</v-text>
                 </div>
             </v-container>
         </v-col>
     </v-row>
-    <v-divider  Color="info" thickness="2" ></v-divider>
+    <v-divider Color="info" thickness="2"></v-divider>
     <v-row>
         <v-col>
-            <v-container fluid >
+            <v-container fluid class="mx-auto" >
                 <v-timeline justify="center">
                     <v-timeline-item dot-color="purple-lighten-2" fill-dot size="default">
                         <v-hover v-slot="{ isHovering, props }" close-delay="200">
@@ -156,8 +156,6 @@
                             </v-card>
                         </v-hover>
                     </v-timeline-item>
-
-
                 </v-timeline>
             </v-container>
         </v-col>
@@ -172,9 +170,4 @@ const items = ref([{ size: 'default', dotColor: 'purple-lighten-2', cardColor: '
 
 </script>
 
-<style scoped>
-#title {
-    width: 100%;
-
-}
-</style>
+<style scoped></style>

@@ -7,9 +7,7 @@
             <aboutME></aboutME>
         </v-col>
     </v-row>
-    
-    <br>
-    
+
     <v-row>
         <v-col>
             <caseTimeLine></caseTimeLine>
