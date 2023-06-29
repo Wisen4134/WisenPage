@@ -1,5 +1,5 @@
 <template>
-    <v-sheet class="mx-auto" elevation="8" max-width="800">
+    <v-container fluid height="100%">
         <v-slide-group v-model="model" class="pa-4" selected-class="bg-primary" show-arrows>
             <v-slide-group-item v-for="n in 15" :key="n" v-slot="{ isSelected, toggle, selectedClass }">
                 <v-card color="grey-lighten-1" :class="['ma-4', selectedClass]" height="200" width="100" @click="toggle">
@@ -21,7 +21,9 @@
                 </div>
             </v-sheet>
         </v-expand-transition>
-    </v-sheet>
+    </v-container>
+        
+    
 </template>
 
 <script setup>

@@ -7,28 +7,36 @@
                 </div>
             </v-container>
         </v-col>
-        
-    </v-row>
-    <v-row >
-    <v-divider Color="info" thickness="2"></v-divider>
 
-        <v-col >
-            <v-container fluid class="w-auto h-auto " >
-                <v-timeline  side="end">
-                    <v-timeline-item v-for="n in 10" dot-color="purple-lighten-2" fill-dot size="default">
+    </v-row>
+    <v-row>
+        <v-divider thickness="4"></v-divider>
+
+        <v-col md="6" offset-md="3" sm="0" xs="0">
+            <v-container fluid class=" ">
+                <v-timeline side="end">
+                    <v-timeline-item v-for="n in 10" dot-color="" fill-dot size="default">
                         <v-hover v-slot="{ isHovering, props }" close-delay="50">
                             <v-card :elevation="isHovering ? 16 : 2" :class="{ 'on-hover': isHovering }" v-bind="props"
-                                variant="outlined">
-                                <v-card-title class="bg-purple-lighten-1">
-                                    <v-icon size="large" class="me-4" icon="mdi-focus-auto"></v-icon>
-                                    <v-text class="font-weight-light text-h6">AutoFocus</v-text>
-                                    
+                                variant="tonal">
+                                <v-img src="https://picsum.photos/seed/1920/1080" height="200px"
+                                    cover></v-img>
+                                <v-card-title class="text-center">
+                                    <v-icon size="large" class="mr-4" icon="mdi-focus-auto"></v-icon>
+                                    <v-text class="font-weight-medium text-h5">AutoFocus</v-text>
+
                                 </v-card-title>
 
-                                <v-card-text class=" font-weight-bold text-center">
-                                    <p>環境&技術：.Net framework 4.7.2 、 Visual Studio 2019 、ModbusRTU</p>
-                                    <p>敘述：winform 撰寫使用文件 ModbusRTU 可讀寫指定路徑json 多執行緒、lock、mutex</p>
+                                <v-card-text class=" font-weight-medium text-left">
+                                    環境&技術：.Net framework 4.7.2 、 Visual Studio 2019 、ModbusRTU
+                                    敘述：winform 撰寫使用文件 ModbusRTU 可讀寫指定路徑json 多執行緒、lock、mutex
                                 </v-card-text>
+
+                                <v-card-actions>
+                                    <v-btn color="" variant="text">
+                                        Explore
+                                    </v-btn>
+                                </v-card-actions>
                             </v-card>
                         </v-hover>
                     </v-timeline-item>

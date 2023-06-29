@@ -2,16 +2,11 @@
     
     <!--  -->
     
-    <v-row>
-        <v-col>
+    
             <aboutME></aboutME>
-        </v-col>
-    </v-row>
-    <v-row>
-        <v-col>
+        
             <caseTimeLine></caseTimeLine>
-        </v-col>
-    </v-row>
+        
     
 </template>
 
