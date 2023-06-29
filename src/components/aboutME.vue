@@ -8,8 +8,25 @@
                 cover
                 :src="item.imgSrc"
                 ></v-img>
-                <v-card-item class="font-weight-bold" :title="item.cardTitle" :subtitle="item.cardSubTitle"></v-card-item>
-                <v-card-text class="font-weight-medium text-left">{{ item.cardText1 }}<br>{{ item.cardText2 }}<br>{{ item.cardText3 }}<br>{{ item.cardText4 }}<br></v-card-text>
+                <v-card-title>
+                    <v-text class="font-weight-black">
+                        {{ item.cardTitle }}
+                    </v-text>
+                </v-card-title>
+
+                <v-card-subtitle class="font-weight-black">
+                    <v-text>
+                        {{ item.cardSubTitle }}
+                    </v-text>
+                </v-card-subtitle>
+                
+                <v-card-text class="font-weight-medium text-left">
+                    <p class="text-left">{{ item.cardText1 }}</p>
+                    <p class="text-left">{{ item.cardText2 }}</p>
+                    <p class="text-left">{{ item.cardText3 }}</p>
+                    <p class="text-left">{{ item.cardText4 }}</p>
+                    
+                </v-card-text>
             </v-card>
         </v-col>
         

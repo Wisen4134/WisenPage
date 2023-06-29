@@ -1,43 +1,80 @@
 
 <template>
   <v-app :theme="theme">
-    <v-app-bar color="#B2DFDB" scroll-behavior="hide" density="compact" :elevation="2" theme="light">
-      <v-container class="py-0 fill-height mx-auto " fluid="true">
-        <v-app-bar-nav-icon icon="mdi-alpha-w-circle"></v-app-bar-nav-icon>
-        <v-app-bar-title>
-          Wisen`s Page
-        </v-app-bar-title>
-        <v-spacer></v-spacer>
+    <v-app-bar color="#B2DFDB" scroll-behavior="hide" scroll-threshold="100" density="compact" :elevation="2"
+      theme="light">
 
-        <v-btn icon v-for="appicon in appIcons" :key="appicon.key" :name="appicon.value" :href="appicon.link"
-          target="_blank">
-          <v-icon>{{ appicon.icon }}</v-icon>
+
+      <v-app-bar-title>
+        <v-icon>
+          mdi-alpha-w-circle
+        </v-icon>
+
+        Wisen`s Page
+
+        <v-btn v-for="item in menus" :key="item.key" :name="item.value" variant="text"
+          @click="$router.push(item.routerName)" color="#E0F2F1" rounded="false">
+          <v-icon color="#00796B">{{ item.icon }}</v-icon>
+          <v-text class="text-black text-subtitle-1 font-weight-medium">{{ item.title }}</v-text>
         </v-btn>
-        <v-btn :prepend-icon="theme === 'light' ? 'mdi-weather-sunny' : 'mdi-weather-night'" @click="changeTheme">
-          <v-text>{{ themeText }}</v-text>
-        </v-btn>
-      </v-container>
+      </v-app-bar-title>
+
+
+
+
+      <v-btn variant="text" :icon="theme === 'light' ? 'mdi-weather-night ' : 'mdi-weather-sunny'" @click="changeTheme">
+
+      </v-btn>
+
+
+      <!-- -->
+
+
 
     </v-app-bar>
-    <v-main>
+    <v-main class="d-flex align-start justify-center h-auto w-auto">
 
-      <v-container fluid class="mx-auto " >
-        <v-row>
-          <v-col v-for="item in menus" :key="item.key" :name="item.value">
-            <v-btn variant="outlined" block @click="$router.push(item.routerName)" color="#E0F2F1" rounded="false">
+      <v-container fluid class="mx-10 w-auto ">
+        <!-- <v-row>
+          <v-col >
+            <v-btn v-for="item in menus" :key="item.key" :name="item.value" variant="outlined"  @click="$router.push(item.routerName)" color="#E0F2F1" rounded="false">
               <v-icon color="#00796B">{{ item.icon }}</v-icon>
               <v-text class="text-teal-darken-2 text-subtitle-1 font-weight-medium">{{ item.title }}</v-text>
             </v-btn>
           </v-col>
-
+        </v-row> -->
+        <v-row>
+          <v-col>
+            <div id="app">
+              <RouterView />
+            </div>
+          </v-col>
         </v-row>
-        <div id="app">
-          <RouterView />
-        </div>
+
       </v-container>
 
 
     </v-main>
+
+    <v-footer class=" d-flex flex-column bg-indigo-lighten-1">
+      <div class="align-center px-4">
+
+        <v-btn v-for="appicon in appIcons" variant="text" icon :key="appicon.key" :name="appicon.value"
+          :href="appicon.link" target="_blank">
+          <v-icon>{{ appicon.icon }}</v-icon>
+        </v-btn>
+      </div>
+
+
+
+
+
+
+
+    </v-footer>
+
+
+
   </v-app>
 </template>
 
@@ -65,7 +102,14 @@ function changeTheme() {
   themeText.value = themeText.value === 'Day' ? 'Night' : 'Day'
 }
 
+const tab = ref(null);
 
+const icons = ref([
+  'mdi-facebook',
+  'mdi-twitter',
+  'mdi-linkedin',
+  'mdi-instagram',
+])
 
 </script>
 

@@ -7,14 +7,12 @@
             <aboutME></aboutME>
         </v-col>
     </v-row>
-
     <v-row>
         <v-col>
             <caseTimeLine></caseTimeLine>
         </v-col>
     </v-row>
-    <br>
-    &nbsp;
+    
 </template>
 
 <script setup>
