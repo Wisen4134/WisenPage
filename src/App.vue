@@ -1,14 +1,15 @@
 
 <template>
-  <v-app :theme="theme">
+  <v-app :theme="themeData.theme">
 
     <v-app-bar :color="barColor[0]" scroll-behavior="" scroll-threshold="10 20" density="compact" :elevation="0"
-      theme="light">
+      >
       <v-app-bar-title>
         <v-icon>
           mdi-alpha-w-circle
         </v-icon>
-        Wisen`s Page
+        Wisen`s Page 
+        
         <v-btn v-for="item in menus" :key="item.key" :name="item.value" variant="text"
           @click="$router.push(item.routerName)" color="" rounded="false" class="ml-5">
           <v-icon color="" class="font-weight-bold">{{ item.icon }}</v-icon>
@@ -32,7 +33,7 @@
         <v-row>
           <v-col>
             <v-text class="font-center font-weight-bold text-h5 ">
-              Contact Me！
+              Contact Me！ 
               <v-icon> mdi-arrow-down-thick </v-icon>
             </v-text>
           </v-col>
@@ -57,7 +58,9 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import { ref, reactive } from 'vue'
-//import HelloWorld from './components/HelloWorld.vue'
+import useTheme from "@/stores/theme"
+const themeData = useTheme();
+console.log("Start APP! Theme=" + themeData.theme)
 
 //app-bar按鈕
 const menus = ref([{ value: 1, routerName: '/', title: '首頁', icon: 'mdi-home-variant-outline' },
@@ -78,11 +81,12 @@ const mainColor = ref('bg-light-blue-lighten-5 d-flex align-start justify-center
 const theme = ref('light');
 const themeText = ref('Day');
 function changeTheme() {
-  theme.value = theme.value === 'light' ? 'dark' : 'light'
+  themeData.theme = themeData.theme === 'light' ? 'dark' : 'light'
   themeText.value = themeText.value === 'Day' ? 'Night' : 'Day'
   mainColor.value = mainColor.value === 'bg-light-blue-lighten-5 d-flex align-start justify-center h-auto w-auto' ? 'bg-grey-darken-4 d-flex align-start justify-center h-auto w-auto' : 'bg-light-blue-lighten-5 d-flex align-start justify-center h-auto w-auto'
   barColor.value[0] = barColor.value[0] === 'light-blue-lighten-5' ? 'grey-darken-4' : 'light-blue-lighten-5'
   barColor.value[1] = barColor.value[1] === 'light-blue-lighten-5' ? 'grey-darken-4' : 'light-blue-lighten-5'
+  console.log("pinia`s theme = " + themeData.theme);
 }
 
 const barColor = ref([

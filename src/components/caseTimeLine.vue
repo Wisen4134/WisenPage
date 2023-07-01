@@ -1,25 +1,32 @@
 <template>
     <v-row>
         <v-col>
-            <v-container fluid>
-                <div class="d-flex justify-center ">
-                    <v-text class="text-h4 font-weight-bold">專案經歷</v-text>
-                </div>
-            </v-container>
+        <v-divider thickness="4"></v-divider>
+            
         </v-col>
 
     </v-row>
     <v-row>
-        <v-divider thickness="4"></v-divider>
 
-        <v-col md="6" offset-md="3" sm="0" xs="0">
-            <v-container fluid class=" ">
-                <v-timeline side="end" align="start">
+        
+            <v-container fluid class="py-0">
+                
+                <div class="d-flex justify-center ">
+                    
+                    <v-text class="text-h4 font-weight-bold">Project Experience</v-text>
+                </div>
+            </v-container>
+        
+        
+
+        <v-col md="6" offset-md="3" sm="0" xs="0" class="py-0" >
+            <v-container fluid class="py-0">
+                <v-timeline side="end" align="start" class="">
                     <v-timeline-item v-for="item in items" :dot-color="item.dotColor" :size="item.dotSize"
-                        :icon="item.dotIcon" class="w-auto ma-10" fill-dot>
+                        :icon="item.dotIcon" class="w-auto ma-10 " fill-dot>
                         <v-hover v-slot="{ isHovering, props }" close-delay="50">
-                            <v-card :elevation="isHovering ? 16 : 2" :class="{ 'on-hover': isHovering }" v-bind="props"
-                                :variant="item.cardVariant">
+                            <v-card :elevation="isHovering ? 16 : 2" :class="{ 'on-hover': isHovering, }" v-bind="props"
+                                :variant="item.cardVariant" >
                                 <v-img :src="item.cardImgSrc" height="200px" cover></v-img>
                                 <v-card-title class="text-center">
 
@@ -69,6 +76,8 @@
 
 <script setup>
 import { ref, reactive } from 'vue'
+import useTheme from "@/stores/theme"
+const themeData = useTheme();
 
 const cardTextShow = ref(false);
 
