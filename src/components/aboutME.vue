@@ -117,22 +117,43 @@ const themeData = useTheme();
 
 // 個人介紹那張
 const meCards = ref([
-    { value: 1, imgSrc: 'me.jpg', cardTitle: '黃宇呈(Wisen)', cardSubTitle: 'Software Engineer', cardText: 'Hi,我是黃宇呈 現職為軟體工程師 在職期間參與許多專案開發,包含Winfrom、C#實現Gateway、桌面應用程式、Watchdog、C#實現定時推播訊息到Line等等,在2023年初接觸Web 藉由自學一個月DEMO出物業管理系統後台頁面 並開始增進Web Develop相關技能及技術 對於此領域的熱忱讓我有很多動力投入！', },
+    { value: 1, imgSrc: 'me.jpg', cardTitle: '黃宇呈(Wisen)', cardSubTitle: 'Software Engineer', cardText: 'Hi我是黃宇呈！大學就讀電子工程系並以IC Design為進修方向，但後來對於程式相關有興趣故開始自我精進。現職為軟體工程師，在職期間參與許多專案開發包含Winfrom、C#實現Gateway、桌面應用程式、Watchdog監測程式、C#搭配ORM串接MSSQL取值回前端並能夠匯出CSV至本地、C#實現定時推播資料庫內資訊到Line等等。在2023年初接觸Web藉由下班時間自學相關領域的技術，在一個月內DEMO出物業管理系統後台頁面並開始增進Web Develop相關技能及技術，對於此領域的熱忱讓我有很多動力投入！', },
     //{ value: 2, imgSrc: 'skill.jpg', cardTitle: 'Skills', cardSubTitle: 'Framework & Technology', cardText1: `IDE：Visual Studio、VS Code`, cardText2: `Language：JavaScript、C#、SQL`, cardText3: `Framework：.Net6、.Net Framework 4.7.2 、.Net core、Vue、Vuetify`, cardText4: 'Technology：HTML、CSS、Node.js、MSSQL、Modbus、DNP3、', },
 ])
 
 // 底下經歷、專案、目標、環境那張
 const littleCards = ref([
-    { value: 1, iconClass: "text-center ", icon: "mdi-briefcase", cardTitleClass: "text-center font-weight-bold", cardTitle: "Seniority", textClass: "text-center font-weight-bold ", content: ["1 - 2 Years"], },
-    { value: 2, iconClass: "text-center ", icon: "mdi-semantic-web", cardTitleClass: "text-center font-weight-bold", cardTitle: "Projects", textClass: "text-center font-weight-bold ", content: ["5+"], },
-    { value: 3, iconClass: "text-center ", icon: "mdi-bullseye-arrow", cardTitleClass: "text-center font-weight-bold", cardTitle: "Targets", textClass: "text-center font-weight-bold  ", content: ["Full-Stack"], },
+    {   value: 1, 
+        iconClass: "text-center ", 
+        icon: "mdi-briefcase", 
+        cardTitleClass: "text-center font-weight-bold", 
+        cardTitle: "Seniority", 
+        textClass: "text-center font-weight-bold ", 
+        content: ["1 - 2 Years"], 
+    },
+    {   value: 2,
+         iconClass: "text-center ", 
+         icon: "mdi-semantic-web", 
+         cardTitleClass: "text-center font-weight-bold", 
+         cardTitle: "Projects", 
+         textClass: "text-center font-weight-bold ", 
+         content: ["5+"], 
+    },
+    { value: 3, 
+        iconClass: "text-center ", 
+        icon: "mdi-bullseye-arrow", 
+        cardTitleClass: "text-center font-weight-bold", 
+        cardTitle: "Targets", 
+        textClass: "text-center font-weight-bold  ", content: ["Full-Stack"], },
     { value: 4, iconClass: "text-center ", icon: "mdi-sprout", cardTitleClass: "text-center font-weight-bold", cardTitle: "Environments", textClass: "text-center font-weight-bold text-caption", content: ["VS 2022 &Code"], },
 ])
 
 // 技能
 const skillCards = ref([
     {
-        value: 1, topText: 'Front-End', skills: [
+        value: 1, 
+        topText: 'Front-End', 
+        skills: [
             { skillName: 'HTML & CSS', skillProficiency: 'Qualified', },
             { skillName: 'SASS/SCSS', skillProficiency: 'Elementary', },
             { skillName: 'JavaScript', skillProficiency: 'Elementary', },
@@ -141,7 +162,9 @@ const skillCards = ref([
         ]
     },
     {
-        value: 2, topText: 'Back-End', skills: [
+        value: 2, 
+        topText: 'Back-End', 
+        skills: [
             { skillName: 'C#', skillProficiency: 'Medium', },
             { skillName: '.Net 6', skillProficiency: 'Medium', },
             { skillName: '.Net FrameWork', skillProficiency: 'Medium', },
